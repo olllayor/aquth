@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <body>
+    <a id="login" href="https://auth.example.com/authorize?provider=google&redirect_uri=https%3A%2F%2Fapp.example.com%2Fcallback.html">Login with Google</a>
+    <pre id="out"></pre>
+    <script>
+      const params = new URLSearchParams(location.hash.slice(1));
+      const out = document.getElementById("out");
+      if (params.get("token")) {
+        out.textContent = `JWT: ${params.get("token")}`;
+      }
+      if (params.get("error")) {
+        out.textContent = `Error: ${params.get("error")} (${params.get("error_description")})`;
+      }
+    </script>
+  </body>
+</html>

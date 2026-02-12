@@ -1,0 +1,33 @@
+{
+  "name": "2loc-auth",
+  "version": "0.1.0",
+  "description": "2LOC Auth - radically simple OAuth broker for web apps",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@10.28.1",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:integration": "vitest run tests/integration",
+    "test:security": "vitest run tests/security"
+  },
+  "dependencies": {
+    "hono": "^4.8.0",
+    "jose": "^5.10.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260204.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0",
+    "vitest": "^2.1.8",
+    "wrangler": "^4.11.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
